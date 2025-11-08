@@ -712,7 +712,7 @@ export interface ApiOnboardingSliderOnboardingSlider
   extends Struct.CollectionTypeSchema {
   collectionName: 'onboarding_sliders';
   info: {
-    displayName: 'OnboardingSlider';
+    displayName: 'OnboardingSlider_en';
     pluralName: 'onboarding-sliders';
     singularName: 'onboarding-slider';
   };
