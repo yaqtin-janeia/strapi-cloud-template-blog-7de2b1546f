@@ -667,6 +667,38 @@ export interface ApiHomeBannerHomeBanner extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOnboardingSliderArOnboardingSliderAr
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'onboarding_slider_ars';
+  info: {
+    displayName: 'OnboardingSlider_ar';
+    pluralName: 'onboarding-slider-ars';
+    singularName: 'onboarding-slider-ar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::onboarding-slider-ar.onboarding-slider-ar'
+    > &
+      Schema.Attribute.Private;
+    OnboardingImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOnboardingSliderOnboardingSlider
   extends Struct.CollectionTypeSchema {
   collectionName: 'onboarding_sliders';
@@ -1324,6 +1356,7 @@ declare module '@strapi/strapi' {
       'api::faq.faq': ApiFaqFaq;
       'api::global.global': ApiGlobalGlobal;
       'api::home-banner.home-banner': ApiHomeBannerHomeBanner;
+      'api::onboarding-slider-ar.onboarding-slider-ar': ApiOnboardingSliderArOnboardingSliderAr;
       'api::onboarding-slider.onboarding-slider': ApiOnboardingSliderOnboardingSlider;
       'api::privacy.privacy': ApiPrivacyPrivacy;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;

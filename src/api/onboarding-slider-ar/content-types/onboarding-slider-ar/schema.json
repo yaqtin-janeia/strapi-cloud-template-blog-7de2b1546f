@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "onboarding_slider_ars",
+  "info": {
+    "singularName": "onboarding-slider-ar",
+    "pluralName": "onboarding-slider-ars",
+    "displayName": "OnboardingSlider_ar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "OnboardingImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
