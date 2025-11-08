@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "onboarding_sliders",
+  "collectionName": "onboarding_slider_ens",
   "info": {
-    "singularName": "onboarding-slider",
-    "pluralName": "onboarding-sliders",
+    "singularName": "onboarding-slider-en",
+    "pluralName": "onboarding-slider-ens",
     "displayName": "OnboardingSlider_en"
   },
   "options": {
@@ -17,11 +17,6 @@
   "attributes": {
     "OnboardingImages": {
       "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "multiple": true,
       "allowedTypes": [
         "images",

@@ -708,13 +708,13 @@ export interface ApiOnboardingSliderArOnboardingSliderAr
   };
 }
 
-export interface ApiOnboardingSliderOnboardingSlider
+export interface ApiOnboardingSliderEnOnboardingSliderEn
   extends Struct.CollectionTypeSchema {
-  collectionName: 'onboarding_sliders';
+  collectionName: 'onboarding_slider_ens';
   info: {
     displayName: 'OnboardingSlider_en';
-    pluralName: 'onboarding-sliders';
-    singularName: 'onboarding-slider';
+    pluralName: 'onboarding-slider-ens';
+    singularName: 'onboarding-slider-en';
   };
   options: {
     draftAndPublish: true;
@@ -731,17 +731,12 @@ export interface ApiOnboardingSliderOnboardingSlider
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::onboarding-slider.onboarding-slider'
+      'api::onboarding-slider-en.onboarding-slider-en'
     >;
     OnboardingImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1366,7 +1361,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::home-banner.home-banner': ApiHomeBannerHomeBanner;
       'api::onboarding-slider-ar.onboarding-slider-ar': ApiOnboardingSliderArOnboardingSliderAr;
-      'api::onboarding-slider.onboarding-slider': ApiOnboardingSliderOnboardingSlider;
+      'api::onboarding-slider-en.onboarding-slider-en': ApiOnboardingSliderEnOnboardingSliderEn;
       'api::privacy.privacy': ApiPrivacyPrivacy;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
       'plugin::content-releases.release': PluginContentReleasesRelease;
