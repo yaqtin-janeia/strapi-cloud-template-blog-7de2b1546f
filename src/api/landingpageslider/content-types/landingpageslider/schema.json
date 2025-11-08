@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landingpagesliders",
+  "info": {
+    "singularName": "landingpageslider",
+    "pluralName": "landingpagesliders",
+    "displayName": "landingpageslider"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "landingslider": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

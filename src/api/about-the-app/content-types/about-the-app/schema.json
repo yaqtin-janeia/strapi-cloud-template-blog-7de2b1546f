@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_the_apps",
+  "info": {
+    "singularName": "about-the-app",
+    "pluralName": "about-the-apps",
+    "displayName": "About The App"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Body": {
+      "type": "richtext"
+    }
+  }
+}
