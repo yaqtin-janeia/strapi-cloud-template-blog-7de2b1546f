@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "landingpagesliders",
+  "collectionName": "onboarding_sliders",
   "info": {
-    "singularName": "landingpageslider",
-    "pluralName": "landingpagesliders",
-    "displayName": "landingpageslider"
+    "singularName": "onboarding-slider",
+    "pluralName": "onboarding-sliders",
+    "displayName": "OnboardingSlider"
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "landingslider": {
+    "OnboardingImages": {
       "type": "media",
       "pluginOptions": {
         "i18n": {

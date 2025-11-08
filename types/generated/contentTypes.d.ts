@@ -627,12 +627,12 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiImageSliderImageSlider extends Struct.CollectionTypeSchema {
-  collectionName: 'image_sliders';
+export interface ApiHomeBannerHomeBanner extends Struct.CollectionTypeSchema {
+  collectionName: 'home_banners';
   info: {
-    displayName: 'ImageSlider';
-    pluralName: 'image-sliders';
-    singularName: 'image-slider';
+    displayName: 'HomeBanner';
+    pluralName: 'home-banners';
+    singularName: 'home-banner';
   };
   options: {
     draftAndPublish: true;
@@ -646,13 +646,7 @@ export interface ApiImageSliderImageSlider extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::image-slider.image-slider'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    SliderLanding: Schema.Attribute.Media<
+    homebannerimages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     > &
@@ -661,19 +655,25 @@ export interface ApiImageSliderImageSlider extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::home-banner.home-banner'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
   };
 }
 
-export interface ApiLandingpagesliderLandingpageslider
+export interface ApiOnboardingSliderOnboardingSlider
   extends Struct.CollectionTypeSchema {
-  collectionName: 'landingpagesliders';
+  collectionName: 'onboarding_sliders';
   info: {
-    displayName: 'landingpageslider';
-    pluralName: 'landingpagesliders';
-    singularName: 'landingpageslider';
+    displayName: 'OnboardingSlider';
+    pluralName: 'onboarding-sliders';
+    singularName: 'onboarding-slider';
   };
   options: {
     draftAndPublish: true;
@@ -687,7 +687,12 @@ export interface ApiLandingpagesliderLandingpageslider
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    landingslider: Schema.Attribute.Media<
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::onboarding-slider.onboarding-slider'
+    >;
+    OnboardingImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     > &
@@ -696,11 +701,6 @@ export interface ApiLandingpagesliderLandingpageslider
           localized: true;
         };
       }>;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::landingpageslider.landingpageslider'
-    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1323,8 +1323,8 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::faq.faq': ApiFaqFaq;
       'api::global.global': ApiGlobalGlobal;
-      'api::image-slider.image-slider': ApiImageSliderImageSlider;
-      'api::landingpageslider.landingpageslider': ApiLandingpagesliderLandingpageslider;
+      'api::home-banner.home-banner': ApiHomeBannerHomeBanner;
+      'api::onboarding-slider.onboarding-slider': ApiOnboardingSliderOnboardingSlider;
       'api::privacy.privacy': ApiPrivacyPrivacy;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
       'plugin::content-releases.release': PluginContentReleasesRelease;

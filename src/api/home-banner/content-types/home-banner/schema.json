@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "image_sliders",
+  "collectionName": "home_banners",
   "info": {
-    "singularName": "image-slider",
-    "pluralName": "image-sliders",
-    "displayName": "ImageSlider"
+    "singularName": "home-banner",
+    "pluralName": "home-banners",
+    "displayName": "HomeBanner"
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "SliderLanding": {
+    "homebannerimages": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
