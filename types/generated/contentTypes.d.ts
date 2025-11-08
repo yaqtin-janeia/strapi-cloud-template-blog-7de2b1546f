@@ -546,6 +546,7 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
   };
   attributes: {
     Answer: Schema.Attribute.Blocks;
+    CommonBody: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -671,6 +672,7 @@ export interface ApiTermsAndConditionTermsAndCondition
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    LastUpdated: Schema.Attribute.DateTime;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -678,7 +680,7 @@ export interface ApiTermsAndConditionTermsAndCondition
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    TCBody: Schema.Attribute.Text;
+    TCRichBody: Schema.Attribute.RichText;
     TCTitle: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

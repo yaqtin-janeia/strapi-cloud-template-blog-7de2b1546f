@@ -14,8 +14,11 @@
     "TCTitle": {
       "type": "string"
     },
-    "TCBody": {
-      "type": "text"
+    "TCRichBody": {
+      "type": "richtext"
+    },
+    "LastUpdated": {
+      "type": "datetime"
     }
   }
 }

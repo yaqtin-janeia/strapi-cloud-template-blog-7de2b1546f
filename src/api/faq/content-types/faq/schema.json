@@ -19,6 +19,9 @@
     },
     "Order": {
       "type": "integer"
+    },
+    "CommonBody": {
+      "type": "richtext"
     }
   }
 }
