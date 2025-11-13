@@ -724,7 +724,7 @@ export interface ApiHomepagesectionHomepagesection
     background_color: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     banner_image: Schema.Attribute.Media<
@@ -733,7 +733,7 @@ export interface ApiHomepagesectionHomepagesection
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Schema.Attribute.DateTime;
@@ -743,19 +743,19 @@ export interface ApiHomepagesectionHomepagesection
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
-    lauout_type: Schema.Attribute.Enumeration<['grid', 'carousel', 'banner']> &
+    layout_type: Schema.Attribute.Enumeration<['grid', 'carousel', 'banner']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     limit: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     locale: Schema.Attribute.String;
@@ -767,7 +767,7 @@ export interface ApiHomepagesectionHomepagesection
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
@@ -775,7 +775,7 @@ export interface ApiHomepagesectionHomepagesection
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     Title: Schema.Attribute.String &

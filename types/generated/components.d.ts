@@ -62,6 +62,22 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTitle extends Struct.ComponentSchema {
+  collectionName: 'components_shared_titles';
+  info: {
+    displayName: 'Title';
+  };
+  attributes: {};
+}
+
+export interface SharedTitleLocale extends Struct.ComponentSchema {
+  collectionName: 'components_shared_title_locales';
+  info: {
+    displayName: 'TitleLocale';
+  };
+  attributes: {};
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -70,6 +86,8 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.title': SharedTitle;
+      'shared.title-locale': SharedTitleLocale;
     }
   }
 }
