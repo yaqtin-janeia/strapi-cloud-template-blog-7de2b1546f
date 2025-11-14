@@ -33,6 +33,14 @@
       },
       "required": true
     },
+    "Description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "Position": {
       "type": "integer",
       "pluginOptions": {
