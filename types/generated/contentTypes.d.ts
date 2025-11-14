@@ -727,7 +727,7 @@ export interface ApiHomepagesectionHomepagesection
           localized: false;
         };
       }>;
-    banner_image: Schema.Attribute.Media<
+    bannerImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     > &

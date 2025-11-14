@@ -59,15 +59,7 @@
       },
       "required": true
     },
-    "background_color": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "banner_image": {
+    "bannerImages": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
@@ -81,6 +73,14 @@
         "videos",
         "audios"
       ]
+    },
+    "background_color": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     },
     "layout_type": {
       "type": "enumeration",
