@@ -932,6 +932,59 @@ export interface ApiPrivacyPrivacy extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSplashScreenSplashScreen
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'splash_screens';
+  info: {
+    displayName: 'Splash Screen';
+    pluralName: 'splash-screens';
+    singularName: 'splash-screen';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Headline: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::splash-screen.splash-screen'
+    >;
+    MainImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTermsAndConditionTermsAndCondition
   extends Struct.CollectionTypeSchema {
   collectionName: 'terms_and_conditions';
@@ -1504,6 +1557,7 @@ declare module '@strapi/strapi' {
       'api::onboarding-slider-ar.onboarding-slider-ar': ApiOnboardingSliderArOnboardingSliderAr;
       'api::onboarding-slider-en.onboarding-slider-en': ApiOnboardingSliderEnOnboardingSliderEn;
       'api::privacy.privacy': ApiPrivacyPrivacy;
+      'api::splash-screen.splash-screen': ApiSplashScreenSplashScreen;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
