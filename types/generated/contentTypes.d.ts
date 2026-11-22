@@ -683,6 +683,12 @@ export interface ApiHomeBannerHomeBanner extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Desktop: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     homebannerimages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -697,6 +703,12 @@ export interface ApiHomeBannerHomeBanner extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::home-banner.home-banner'
     >;
+    Mobile: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
